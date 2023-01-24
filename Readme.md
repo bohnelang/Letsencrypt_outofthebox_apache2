@@ -1,8 +1,8 @@
 
-Lets encrypt - one script to install all
+#Lets encrypt - one script to install all
 
 
-Howto us this:
+##Howto us this:
 1) mkdir /etc/apache2/letsencrypt
 2) cd /etc/apache2/letsencrypt
 3) Copy this script to this dir
@@ -13,17 +13,17 @@ Howto us this:
 
 You need to edit this part:
 
-# Here this script is
+## Here this script is
 WPATH=/etc/apache2/letsencrypt
 
-# PAth of your document-root directory
+## PAth of your document-root directory
 WWW=/var/www/html/
 
-# Your server name
+## Your server name
 SERVER=www.foo.foo
 
-# Maybe an email
+## Maybe an email
 EMAIL=""
 
-# Group of your Apache2
+## Group of your Apache2
 WWW_GRP=www-data
