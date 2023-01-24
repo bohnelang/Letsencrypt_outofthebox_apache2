@@ -1,8 +1,8 @@
 
-#Lets encrypt - one script to install all
+# Lets encrypt - one script to install all
 
 
-##Howto us this:
+## Howto us this:
 1) mkdir /etc/apache2/letsencrypt
 2) cd /etc/apache2/letsencrypt
 3) Copy this script to this dir
