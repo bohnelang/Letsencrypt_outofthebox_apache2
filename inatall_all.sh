@@ -125,15 +125,15 @@ fi
 
 if test -e zertifikate/fullchain.txt
 then
-        if test -e zertifikate/\$SERVER.pem
+        if test -e zertifikate/\$SERVER.csr
         then
-                cat  zertifikate/fullchain.txt zertifikate/\${SERVER}.pem > zertifikate/\${SERVER}-full.pem
+                cat  zertifikate/fullchain.txt zertifikate/\${SERVER}.csr > zertifikate/\${SERVER}-full.csr
         fi
 fi
 
-if ! test -e zertifikate/\${SERVER}-full.pem
+if ! test -e zertifikate/\${SERVER}-full.csr
 then
-        echo "Cannot create zertifikate/\${SERVER}-full.pem"
+        echo "Cannot create zertifikate/\${SERVER}-full.csr"
         exit
 fi
 
@@ -158,11 +158,11 @@ cd \$WPATH
 
 if test -e zertifikate/fullchain.txt
 then
-        if test -e zertifikate/\$SERVER.pem
+        if test -e zertifikate/\$SERVER.csr
         then
-                cat  zertifikate/fullchain.txt zertifikate/\${SERVER}.pem > zertifikate/\${SERVER}-full.pem
+                cat  zertifikate/fullchain.txt zertifikate/\${SERVER}.csr > zertifikate/\${SERVER}-full.csr
         else
-                echo "ERROR: Cannot create zertifikate/\${SERVER}-full.pem" >> logs/err.log
+                echo "ERROR: Cannot create zertifikate/\${SERVER}-full.csr" >> logs/err.log
                 exit
         fi
 fi
@@ -180,7 +180,7 @@ echo "Please check  work/$SERVER/getssl.cfg for finetuning..."
 
 echo
 echo "Add to your Apache2 config this in SSL-Part (sites-enabled)"
-echo "SSLCertificateFile            $WPATH/zertifikate/${SERVER}-full.pem"
+echo "SSLCertificateFile            $WPATH/zertifikate/${SERVER}-full.csr"
 echo "SSLCertificateKeyFile         $WPATH/zertifikate/${SERVER}.key"
 
 echo
