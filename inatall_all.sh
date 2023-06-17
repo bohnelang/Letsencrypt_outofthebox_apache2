@@ -125,15 +125,15 @@ fi
 
 if test -e zertifikate/fullchain.txt
 then
-        if test -e zertifikate/\$SERVER.csr
+        if test -e zertifikate/$SERVER.csr
         then
-                cat  zertifikate/fullchain.txt zertifikate/\${SERVER}.csr > zertifikate/\${SERVER}-full.csr
+                cat  zertifikate/fullchain.txt zertifikate/${SERVER}.csr > zertifikate/${SERVER}-full.csr
         fi
 fi
 
-if ! test -e zertifikate/\${SERVER}-full.csr
+if ! test -e zertifikate/${SERVER}-full.csr
 then
-        echo "Cannot create zertifikate/\${SERVER}-full.csr"
+        echo "Cannot create zertifikate/${SERVER}-full.csr"
         exit
 fi
 
