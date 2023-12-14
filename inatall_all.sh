@@ -99,6 +99,7 @@ DOMAIN_KEY_LOCATION="$WPATH/zertifikate/$SERVER.key" # this is domain key
 DOMAIN_PEM_LOCATION="$WPATH/zertifikate/$SERVER.pem" # this is the domain key, domain cert and CA cert
 
 #RELOAD_CMD="service apache2 reload"
+RELOAD_CMD="/usr/sbin/apachectl restart"
 
 #PREVENT_NON_INTERACTIVE_RENEWAL="true"
 
