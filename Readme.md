@@ -30,6 +30,8 @@ WWW_GRP=www-data
 
 
 # Some hints for Apache2 configuration
+Test your server certificate with: https://www.ssllabs.com/ssltest/ after installation 
+
 ```
 Listen 80
 <VirtualHost *:80>
