@@ -94,8 +94,8 @@ ServerTokens Major
                 ErrorLog ${APACHE_LOG_DIR}/error_ssl.log
 
               
-                SSLCertificateFile              "zertifikate/letsencrypt/zertifikate/youre-domain-full.csr"
-                SSLCertificateKeyFile           "zertifikate/letsencrypt/zertifikate/your-domain.key"
+                SSLCertificateFile              "zertifikate/letsencrypt/zertifikate/your-servername-full.csr"
+                SSLCertificateKeyFile           "zertifikate/letsencrypt/zertifikate/your-servername.key"
 
 
                 SSLHonorCipherOrder on
@@ -117,7 +117,8 @@ ServerTokens Major
 
                 # Lokale Definitionen
                 #Include sites-global-defines/expires.conf
-               
+
+		# ... your configuration ...
 
                 #-------------------------------------------------------------------------------
         </VirtualHost>
