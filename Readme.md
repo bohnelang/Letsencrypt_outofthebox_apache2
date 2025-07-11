@@ -59,12 +59,9 @@ Listen 80
 
 <IfModule mod_ssl.c>
 Listen 443
-#SSLRandomSeed startup file:/dev/urandom 512
-#SSLRandomSeed connect file:/dev/urandom 512
 
 SSLRandomSeed startup builtin
 SSLRandomSeed connect builtin
-
 
 SSLPassPhraseDialog     builtin
 SSLSessionCache         "shmcb:/var/run/ssl_scache(5120000)"
@@ -99,16 +96,14 @@ ServerTokens Major
 	SSLCipherSuite HIGH:MEDIUM:!LOW:!ADH:!EXP:!NULL:!aNULL:!MD5:!RC4
           
 	<FilesMatch "\.(cgi|shtml|phtml|php)$">
-                                SSLOptions +StdEnvVars
+		SSLOptions +StdEnvVars
 	</FilesMatch>
 
 	<Directory /usr/lib/cgi-bin>
-                                SSLOptions +StdEnvVars
+		SSLOptions +StdEnvVars
 	</Directory>
 
-	BrowserMatch "MSIE [2-6]" \
-                                nokeepalive ssl-unclean-shutdown \
-                                downgrade-1.0 force-response-1.0            
+	BrowserMatch "MSIE [2-6]" nokeepalive ssl-unclean-shutdown downgrade-1.0 force-response-1.0            
 
 	# Lokale Definitionen
 	#Include sites-global-defines/expires.conf
